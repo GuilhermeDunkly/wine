@@ -124,9 +124,9 @@ static int shm_unlink(const char *name) {
     }
 
     namelen = strlen(name);
-    fname = (char *) alloca(sizeof("/data/data/com.micewine.emu/files/usr/tmp/") - 1 + namelen + 1);
-    memcpy(fname, "/data/data/com.micewine.emu/files/usr/tmp/", sizeof("/data/data/com.micewine.emu/files/usr/tmp/") - 1);
-    memcpy(fname + sizeof("/data/data/com.micewine.emu/files/usr/tmp/") - 1, name, namelen + 1);
+    fname = (char *) alloca(sizeof("/data/data/com.termux/files/usr/tmp/") - 1 + namelen + 1);
+    memcpy(fname, "/data/data/com.termux/files/usr/tmp/", sizeof("/data/data/com.termux/files/usr/tmp/") - 1);
+    memcpy(fname + sizeof("/data/data/com.termux/files/usr/tmp/") - 1, name, namelen + 1);
 
     return unlink(fname);
 }
@@ -146,9 +146,9 @@ static int shm_open(const char *name, int oflag, mode_t mode) {
     }
 
     namelen = strlen(name);
-    fname = (char *) alloca(sizeof("/data/data/com.micewine.emu/files/usr/tmp/") - 1 + namelen + 1);
-    memcpy(fname, "/data/data/com.micewine.emu/files/usr/tmp/", sizeof("/data/data/com.micewine.emu/files/usr/tmp/") - 1);
-    memcpy(fname + sizeof("/data/data/com.micewine.emu/files/usr/tmp/") - 1, name, namelen + 1);
+    fname = (char *) alloca(sizeof("/data/data/com.termux/files/usr/tmp/") - 1 + namelen + 1);
+    memcpy(fname, "/data/data/com.termux/files/usr/tmp/", sizeof("/data/data/com.termux/files/usr/tmp/") - 1);
+    memcpy(fname + sizeof("/data/data/com.termux/files/usr/tmp/") - 1, name, namelen + 1);
 
     fd = open(fname, oflag, mode);
     if (fd != -1) {
